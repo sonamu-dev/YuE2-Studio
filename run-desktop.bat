@@ -19,14 +19,14 @@ if errorlevel 1 (
 echo.
 echo [2/3] 의존성 패키지 확인 중...
 if not exist "app\node_modules" (
-    echo [INFO] 프론트엔드 패키지 설치 진행 (app)...
+    echo [INFO] 프론트엔드 패키지 설치 진행: app
     cd /d "%~dp0app"
     call npm install
     cd /d "%~dp0"
 )
 
 if not exist "desktop\node_modules" (
-    echo [INFO] 데스크톱 패키지 설치 진행 (desktop)...
+    echo [INFO] 데스크톱 패키지 설치 진행: desktop
     cd /d "%~dp0desktop"
     call npm install
     cd /d "%~dp0"
